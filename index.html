@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sergei Ivlev - High School Student</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5; /* Light gray background */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center; /* Center align header content */
+            transition: background-color 0.3s; /* Smooth color transition */
+        }
+
+        header:hover {
+            background-color: #555; /* Darken header on hover */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px; /* Increase header font size */
+            transition: color 0.3s; /* Smooth color transition */
+        }
+
+        header:hover h1 {
+            color: #ffd700; /* Change text color on hover */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center; /* Center align navigation links */
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+            transition: transform 0.3s; /* Smooth transform transition */
+        }
+
+        nav ul li:hover {
+            transform: scale(1.1); /* Scale up on hover */
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px; /* Increase font size for navigation links */
+            transition: color 0.3s; /* Smooth color transition */
+        }
+
+        nav ul li a:hover {
+            color: #ffd700; /* Change text color on hover */
+        }
+
+        section {
+            padding: 40px 20px; /* Increase padding for sections */
+            text-align: center; /* Center align section content */
+            transition: transform 0.3s; /* Smooth transform transition */
+        }
+
+        section:hover {
+            transform: translateY(-10px); /* Move up on hover */
+        }
+
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            z-index: 1; /* Ensure the arrows are above the slideshow images */
+            display: none; /* Hide the arrows by default */
+        }
+
+        /* Position the "previous button" to the left */
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* Show the arrows when hovering over the slideshow container */
+        .slideshow-container:hover .prev,
+        .slideshow-container:hover .next {
+            display: block;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        h2 {
+            color: #333; /* Dark gray headings */
+        }
+
+        p {
+            font-size: 18px; /* Increase font size for paragraphs */
+            line-height: 1.6; /* Increase line height for better readability */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            transition: background-color 0.3s; /* Smooth color transition */
+        }
+
+        footer:hover {
+            background-color: #555; /* Darken footer on hover */
+        }
+
+        footer p {
+            margin: 0; /* Remove default margin for footer paragraph */
+        }
+
+        /* Add padding-bottom to create space for the footer */
+        #contact {
+            padding-bottom: 120px; /* Increase padding for the footer */
+        }
+
+        /* Style for the image */
+        .profile-image {
+            display: block;
+            margin: auto; /* Center align the image */
+            width: 200px; /* Adjust the width as needed */
+            border-radius: 50%; /* Rounded corners for circular shape */
+            margin-bottom: 20px; /* Add some space below the image */
+            transition: transform 0.3s; /* Smooth transform transition */
+        }
+
+        .profile-image:hover {
+            transform: scale(1.1); /* Zoom effect on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sergei Ivlev</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#academics">Academics</a></li>
+                <li><a href="#extracurriculars">Extracurriculars</a></li>
+                <li><a href="#projects">Projects</a></li> <!-- Added projects tab -->
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Add your image here -->
+    <img src="your-image-file.jpg" alt="Sergei Ivlev" class="profile-image">
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a motivated high school student with a strong academic record and a passion for science and technology. I am experienced in Python, Java, Html, Networking, Cybersecurity, and Data-Recovery. I am fluently bilingual in English and Russian and have a beginner level proficiency in Spanish.</p>
+        <p>Objective: Seeking a programmer position to apply my technical skills, coding experience, and problem-solving abilities in a dynamic organization, contributing to the development of innovative software solutions.</p>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="slide1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="slide2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="slide3.jpg" style="width:100%">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <section id="academics">
+        <h2>Academic Achievements</h2>
+        <p>• Honor Roll Student<br>• Weighted GPA: 4.0<br>• Unweighted GPA: 4.0<br>• AP Scholar with Distinction</p>
+    </section>
+
+    <section id="extracurriculars">
+        <h2>Extracurricular Activities</h2>
+        <p>• Placeholder</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <!-- Add your projects here -->
+        <p>Project 1: </p>
+        <p>Created a mathematical program to automate Cantor's Diagonal Proof - Python </p>
+        <p>Project 2: </p>
+        <p>Coded a text game in Python </p>
+        <p>Project 3: </p>
+        <p>Performed Data forensics on a bit stream to retrieve unrecoverable data using manual data carving techniques and Cybersecurity software. </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to get in touch with me through the following:</p>
+        <p>Email: <a href="mailto:sergiv007@gmail.com">sergiv007@gmail.com</a></p>
+        <p>Phone: (727) 910-6666</p>
+        <p>Social Media:</p>
+        <p><a href="https://twitter.com/johnsmith" target="_blank">Twitter</a></p>
+        <p><a href="https://www.linkedin.com/in/johnsmith" target="_blank">LinkedIn</a></p>
+        <!-- Add more social media links as needed -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sergei Ivlev. All rights reserved.</p>
+    </footer>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
+</html>
